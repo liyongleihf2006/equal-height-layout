@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .layout{
+            display: table;
+        }
+        .layout-left,.layout-right{
+            display: table-cell;
+            vertical-align: top;
+        }
+        .layout-left>*,.layout-right>*{
+            vertical-align: baseline;
+            vertical-align: initial;
+        }
+        .layout-right{
+            width: 20000px;
+        }
+    </style>
+    <style>
+        html,body,.layout{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+        }
+        .demo-left{
+            background: #19CAAD;
+        }
+        .demo-right{
+            background: #8CC7B5;
+        }
+        .demo-left-inner,.demo-right-inner{
+            border:1px solid;
+            overflow:auto;
+            resize:both;
+        }
+        .demo-left-inner{
+            width: 200px;
+            height: 200px;
+        }
+        .demo-right-inner{
+            resize:vertical;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="layout-left demo-left">
+            <div class="demo-left-inner">
+            </div>
+        </div>
+        <div class="layout-right demo-right">
+            <div class="demo-right-inner">
+                <h4>左右等高并右侧自适应布局</h4>
+                <p>
+                    左右两侧的高度会等于左右两侧内容较高的高度<br/>
+                    内容可以使用百分比设置高度(比如右侧的高度等于容器的80%)
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
